@@ -19,8 +19,8 @@ struct ContentView: View {
     @State var target: String = ""
     @State var scanned: Bool = false
     
+    
     var body: some View {
-        
         VStack {
             if let selectedImage {
                 Image(uiImage: selectedImage)
