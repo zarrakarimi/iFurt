@@ -14,7 +14,6 @@ struct ContentView: View {
     @State private var showCamera = false
     @State private var selectedImage: UIImage?
     @State var image: UIImage?
-    
     @State var probability: [String: Double] = [:]
     @State var names: [String] = [""]
     @State var target: String = ""
