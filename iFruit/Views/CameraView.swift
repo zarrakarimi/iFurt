@@ -1,15 +1,16 @@
 //
-//  ContentView.swift
+//  CameraView.swift
 //  iFruit
 //
-//  Created by Zahra Karimi on 06/12/24.
+//  Created by Zahra Karimi on 17/12/24.
 //
 
 import CoreML
 import SwiftUI
 import PhotosUI
+import Foundation
 
-struct ContentView: View {
+struct CameraView: View {
     
     @State private var showCamera = false
     @State private var selectedImage: UIImage?
@@ -18,6 +19,7 @@ struct ContentView: View {
     @State var names: [String] = [""]
     @State var target: String = ""
     @State var scanned: Bool = false
+    
     
     
     var body: some View {
@@ -37,6 +39,8 @@ struct ContentView: View {
                     target = result!.2
                     
                     scanned.toggle()
+                    
+                    // let nutrients: () = calculateNutrition(food: target)
                 }
             }
             else {
@@ -47,7 +51,8 @@ struct ContentView: View {
             if scanned {
                 VStack {
 //                    Text("names \(names)")
-//                    Text("Target: \(target)")
+                   
+                    
                     Text("Probability: \(probability)")
                 }
             }
@@ -152,4 +157,35 @@ func buffer(from image: UIImage) -> CVPixelBuffer? {
     CVPixelBufferUnlockBaseAddress(pixelBuffer!, CVPixelBufferLockFlags(rawValue: 0))
     
     return pixelBuffer
+}
+
+func calculateNutrition(food: String) {
+
+    let headers = [
+        "x-rapidapi-key": "Sign Up for Key",
+        "x-rapidapi-host": "chomp.p.rapidapi.com"
+    ]
+
+    let request = NSMutableURLRequest(
+        url: NSURL(string: "https://chomp.p.rapidapi.com/request.php?ingredient=milk")! as URL,
+        cachePolicy: .useProtocolCachePolicy,
+        timeoutInterval: 10.0
+    )
+    
+    request.httpMethod = "GET"
+    request.allHTTPHeaderFields = headers
+
+    let session = URLSession.shared
+    let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
+        if (error != nil) {
+            print(error as Any)
+        } else {
+            let httpResponse = response as? HTTPURLResponse
+            print(httpResponse as Any)
+            print(type(of: httpResponse))
+        }
+    })
+
+    dataTask.resume()
+
 }

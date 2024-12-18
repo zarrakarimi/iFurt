@@ -36,7 +36,7 @@
             landmarkType = "24">
             <Locations>
                <Location
-                  uuid = "C9235C14-445F-4FC7-965F-F2278FD2701A - d021c79b829ae839"
+                  uuid = "C9235C14-445F-4FC7-965F-F2278FD2701A - d021c79b829ae818"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -46,11 +46,11 @@
                   urlString = "file:///Users/zahrakarimi/Desktop/iFruit/iFruit/ContentView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30">
+                  startingLineNumber = "29"
+                  endingLineNumber = "29">
                </Location>
                <Location
-                  uuid = "C9235C14-445F-4FC7-965F-F2278FD2701A - f76050f7cb4f3d17"
+                  uuid = "C9235C14-445F-4FC7-965F-F2278FD2701A - f76050f7cb4f3cf4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -60,8 +60,8 @@
                   urlString = "file:///Users/zahrakarimi/Desktop/iFruit/iFruit/ContentView.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31">
+                  startingLineNumber = "30"
+                  endingLineNumber = "30">
                </Location>
             </Locations>
          </BreakpointContent>
